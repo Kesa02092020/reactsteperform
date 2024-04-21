@@ -1,10 +1,11 @@
-import React from 'react'
-const forms = ({formData, setFormdata, setError}) => {
-  if (formData.userName === '' && formData.password === '') {
-    setError(true)
+import React from "react";
+const forms = ({ formData, setFormdata, setError }) => {
+  if (formData.userName === "" && formData.password === "") {
+    setError(true);
   } else {
-    setError(false)
+    setError(false);
   }
+
   return (
     <div>
       <div>
@@ -12,7 +13,9 @@ const forms = ({formData, setFormdata, setError}) => {
           type="text"
           placeholder="Username"
           value={formData.userName}
-          onChange={(e) => setFormdata({...formData, userName: e.target.value})}
+          onChange={(e) =>
+            setFormdata({ ...formData, userName: e.target.value })
+          }
         />
       </div>
       <div>
@@ -20,10 +23,12 @@ const forms = ({formData, setFormdata, setError}) => {
           type="text"
           placeholder="PassWord"
           value={formData.password}
-          onChange={(e) => setFormdata({...formData, password: e.target.value})}
+          onChange={(e) =>
+            setFormdata({ ...formData, password: e.target.value })
+          }
         />
       </div>
     </div>
-  )
-}
-export default forms
+  );
+};
+export default forms;

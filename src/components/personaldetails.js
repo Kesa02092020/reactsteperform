@@ -1,5 +1,6 @@
 import React from 'react'
 const forms = ({formData, setFormdata, setError}) => {
+  
   if (formData.name === '' && formData.email === '') {
     setError(true)
   } else {
