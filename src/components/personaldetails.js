@@ -1,10 +1,9 @@
-import React from 'react'
-const forms = ({formData, setFormdata, setError}) => {
-  
-  if (formData.name === '' && formData.email === '') {
-    setError(true)
+import React from "react";
+const forms = ({ formData, setFormdata, setError }) => {
+  if (formData.name !== "" && formData.email !== "") {
+    setError(true);
   } else {
-    setError(false)
+    setError(false);
   }
   return (
     <div>
@@ -13,7 +12,7 @@ const forms = ({formData, setFormdata, setError}) => {
           type="text"
           placeholder="Name"
           value={formData.name}
-          onChange={(e) => setFormdata({...formData, name: e.target.value})}
+          onChange={(e) => setFormdata({ ...formData, name: e.target.value })}
         />
       </div>
       <div>
@@ -21,10 +20,10 @@ const forms = ({formData, setFormdata, setError}) => {
           type="text"
           placeholder="Email"
           value={formData.email}
-          onChange={(e) => setFormdata({...formData, email: e.target.value})}
+          onChange={(e) => setFormdata({ ...formData, email: e.target.value })}
         />
       </div>
     </div>
-  )
-}
-export default forms
+  );
+};
+export default forms;

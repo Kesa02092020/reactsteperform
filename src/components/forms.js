@@ -1,6 +1,6 @@
 import React from "react";
 const forms = ({ formData, setFormdata, setError }) => {
-  if (formData.userName === "" && formData.password === "") {
+  if (formData.userName !== "" && formData.password !== "") {
     setError(true);
   } else {
     setError(false);
